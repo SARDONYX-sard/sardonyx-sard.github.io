@@ -2,7 +2,7 @@
   "cSpell.words": ["lastmod", "paiza", "uhyo"],
   "files.exclude": {
     "**/.git": true,
-    "**/public": true,
+    // "**/public": true,
     "**/resources": true,
     "**/.DS_Store": true,
     "**/Thumbs.db": true
