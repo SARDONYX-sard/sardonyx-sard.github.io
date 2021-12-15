@@ -1,0 +1,4 @@
+baseURL = 'https://sardonyx-sard.github.io'
+languageCode = 'ja'
+title = 'SARDONYXの綴り'
+theme = "hugo-eureka"

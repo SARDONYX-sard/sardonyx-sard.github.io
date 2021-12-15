@@ -1,0 +1,12 @@
+ja:
+  languageCode: ja
+  languageName: 日本語
+  contentDir: content/ja
+  title: SARDONYXの綴り
+
+en:
+  languageCode: en
+  languageName: English
+  # Uncomment for multilingual sites, and move the default content into corresponding sub-folder.
+  contentDir: content/en
+# Uncomment for multilingual sites, and customize the following config.
