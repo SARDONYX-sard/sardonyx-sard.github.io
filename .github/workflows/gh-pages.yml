@@ -21,9 +21,17 @@ jobs:
         uses: peaceiris/actions-hugo@v2
         with:
           hugo-version: "0.85.0"
+          extended: true
 
       - name: Install Dependencies
         run: git clone https://github.com/wangchucheng/hugo-eureka.git ./themes/hugo-eureka
+
+      - uses: actions/cache@v2
+        with:
+          path: /tmp/hugo_cache
+          key: ${{ runner.os }}-hugomod-${{ hashFiles('**/go.sum') }}
+          restore-keys: |
+            ${{ runner.os }}-hugomod-
 
       - name: Build
         run: hugo --minify
