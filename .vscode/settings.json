@@ -1,5 +1,5 @@
 {
-  "cSpell.words": ["lastmod", "paiza", "uhyo"],
+  "cSpell.words": ["coreutils", "lastmod", "paiza", "uhyo"],
   "files.exclude": {
     "**/.git": true,
     // "**/public": true,
