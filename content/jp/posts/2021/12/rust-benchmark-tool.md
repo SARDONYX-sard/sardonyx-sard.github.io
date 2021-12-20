@@ -1,5 +1,5 @@
 ---
-title: "ブログの移設"
+title: "Rustで書かれたベンチマークツール hyperfineの紹介"
 date: "2021-12-15"
 lastmod: "2021-12-15"
 tags:
