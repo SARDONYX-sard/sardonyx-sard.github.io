@@ -21,6 +21,14 @@ categories:
 ---
 
 # $ContentTitle
+
+- [$ContentTitle](#$ContentTitle)
+
+## はじめに
+
+##
+
+## おわりに
 "@
 
 $DefaultContent | Out-File "content/jp/posts/$Year/$Month/$FileName.md"

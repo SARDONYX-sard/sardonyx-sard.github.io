@@ -1,6 +1,6 @@
 <!doctype html><html lang=jp><meta charset=utf-8>
 <meta name=viewport content="width=device-width">
-<title>ブログの移設 | SARDONYXの綴り</title>
+<title>Rustで書かれたベンチマークツール hyperfineの紹介 | SARDONYXの綴り</title>
 <meta name=generator content="Hugo Eureka 0.8.4">
 <link rel=stylesheet href=https://sardonyx-sard.github.io/css/eureka.min.css>
 <script defer src=https://sardonyx-sard.github.io/js/eureka.min.js></script>
@@ -17,13 +17,13 @@
 <script defer src=https://cdn.jsdelivr.net/npm/mermaid@8.9.2/dist/mermaid.min.js integrity="sha256-Zmpaaj+GXFsPF5WdPArSrnW3b30dovldeKsW00xBVwE=" crossorigin></script>
 <link rel=icon type=image/png sizes=32x32 href=https://sardonyx-sard.github.io/images/icon_hu64421c6c7700f606f0ad45d807017b09_5843_32x32_fill_box_center_3.png>
 <link rel=apple-touch-icon sizes=180x180 href=https://sardonyx-sard.github.io/images/icon_hu64421c6c7700f606f0ad45d807017b09_5843_180x180_fill_box_center_3.png>
-<meta name=description content="Rustで書かれたベンチマークツール hyperfineの紹介 はじめに scoop-searchというscoopのツール検索の高速化を図るライブラリを見つ">
-<script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ブログ記事だよ","item":"https://sardonyx-sard.github.io/posts/"},{"@type":"ListItem","position":2,"name":"ブログの移設","item":"https://sardonyx-sard.github.io/posts/2021/12/rust-benchmark-tool/"}]}</script>
-<script type=application/ld+json>{"@context":"https://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"https://sardonyx-sard.github.io/posts/2021/12/rust-benchmark-tool/"},"headline":"ブログの移設 | SARDONYXの綴り","datePublished":"2021-12-15T00:00:00+00:00","dateModified":"2021-12-15T00:00:00+00:00","wordCount":350,"publisher":{"@type":"Person","name":"SARDONYX","logo":{"@type":"ImageObject","url":"https://sardonyx-sard.github.io/images/icon.png"}},"description":"Rustで書かれたベンチマークツール hyperfineの紹介 はじめに scoop-searchというscoopのツール検索の高速化を図るライブラリを見つ"}</script><meta property="og:title" content="ブログの移設 | SARDONYXの綴り">
+<meta name=description content="はじめに lsdとcoreutils lsの速度比較検証 はじめに scoop-searchというscoopのツール検索の高速化を図るライブラリを見つけた時、">
+<script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ブログ記事だよ","item":"https://sardonyx-sard.github.io/posts/"},{"@type":"ListItem","position":2,"name":"Rustで書かれたベンチマークツール hyperfineの紹介","item":"https://sardonyx-sard.github.io/posts/2021/12/rust-benchmark-tool/"}]}</script>
+<script type=application/ld+json>{"@context":"https://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"https://sardonyx-sard.github.io/posts/2021/12/rust-benchmark-tool/"},"headline":"Rustで書かれたベンチマークツール hyperfineの紹介 | SARDONYXの綴り","datePublished":"2021-12-15T00:00:00+00:00","dateModified":"2021-12-15T00:00:00+00:00","wordCount":346,"publisher":{"@type":"Person","name":"SARDONYX","logo":{"@type":"ImageObject","url":"https://sardonyx-sard.github.io/images/icon.png"}},"description":"はじめに lsdとcoreutils lsの速度比較検証 はじめに scoop-searchというscoopのツール検索の高速化を図るライブラリを見つけた時、"}</script><meta property="og:title" content="Rustで書かれたベンチマークツール hyperfineの紹介 | SARDONYXの綴り">
 <meta property="og:type" content="article">
 <meta property="og:image" content="https://sardonyx-sard.github.io/images/icon.png">
 <meta property="og:url" content="https://sardonyx-sard.github.io/posts/2021/12/rust-benchmark-tool/">
-<meta property="og:description" content="Rustで書かれたベンチマークツール hyperfineの紹介 はじめに scoop-searchというscoopのツール検索の高速化を図るライブラリを見つ">
+<meta property="og:description" content="はじめに lsdとcoreutils lsの速度比較検証 はじめに scoop-searchというscoopのツール検索の高速化を図るライブラリを見つけた時、">
 <meta property="og:locale" content="jp">
 <meta property="og:site_name" content="SARDONYXの綴り">
 <meta property="article:published_time" content="2021-12-15T00:00:00+00:00">
@@ -71,7 +71,7 @@
 <div class="w-full max-w-screen-xl lg:px-4 xl:px-8 mx-auto">
 <div class="grid grid-cols-2 lg:grid-cols-8 gap-4 lg:pt-12">
 <div class="col-span-2 lg:col-start-2 lg:col-span-6 bg-secondary-bg rounded px-6 py-8">
-<h1 class="font-bold text-3xl text-primary-text">ブログの移設</h1>
+<h1 class="font-bold text-3xl text-primary-text">Rustで書かれたベンチマークツール hyperfineの紹介</h1>
 <div class="flex flex-wrap flex-row items-center mt-2 text-tertiary-text">
 <div class="mr-6 my-2">
 <i class="fas fa-calendar mr-1"></i>
@@ -87,7 +87,10 @@
 </div>
 </div>
 <div class=content>
-<h1 id=rustで書かれたベンチマークツール-hyperfineの紹介>Rustで書かれたベンチマークツール hyperfineの紹介</h1>
+<ul>
+<li><a href=#%E3%81%AF%E3%81%98%E3%82%81%E3%81%AB>はじめに</a></li>
+<li><a href=#lsd%E3%81%A8coreutils-ls%E3%81%AE%E9%80%9F%E5%BA%A6%E6%AF%94%E8%BC%83%E6%A4%9C%E8%A8%BC>lsdとcoreutils lsの速度比較検証</a></li>
+</ul>
 <h2 id=はじめに>はじめに</h2>
 <p><a href=https://github.com/shilangyu/scoop-search>scoop-search</a>というscoopのツール検索の高速化を図るライブラリを見つけた時、readmeに書いてあったベンチマークツールに目が留まりました。</p>
 <p>それがこちら、hyperfineです。</p>
@@ -98,14 +101,17 @@
 <p>なお、PowerShellユーザーということもあり今回はscoopでインストールしました。</p>
 <pre><code class=language-powerShell>scoop install hyperfine
 </code></pre>
-<h2 id=lsdとcoreutils-lsの速度比較検証><code>lsd</code>と<code>coreutils ls</code>の速度比較検証</h2>
-<p>ではサンプルとして、<a href=https://github.com/Peltoche/lsd>lsd</a>と<a href=https://github.com/uutils/coreutils>coreutils</a>の<code>ls</code>の2つの速度を計測してみましょう。</p>
+<h2 id=lsdとcoreutils-lsの速度比較検証>lsdとcoreutils lsの速度比較検証</h2>
+<ul>
+<li>ではサンプルとして、<a href=https://github.com/Peltoche/lsd>lsd</a>と<a href=https://github.com/uutils/coreutils>coreutils</a>の<code>ls</code>の2つの速度を計測してみましょう。</li>
+</ul>
 <pre><code class=language-powerShell>hyperfine --warmup 3 'lsd' 'coreutils ls'
 </code></pre>
+<br>
 <p>すると結果は以下のようになりました。</p>
 <p><img src=/images/programming/rust/hyperfine.webp alt=hyperfine></p>
-<p><code>coreutils ls</code> の方が <code>lsd</code>よりも3.41 ± 0.16倍速い結果となりました。</p>
-<p><code>lsd</code>はアイコンおよびcolorが有効である分の遅延でしょう。</p>
+<p>coreutils ls の方が lsdよりも3.41 ± 0.16倍速い結果となりました。</p>
+<p>lsdはアイコンおよびcolorが有効である分の遅延でしょう。</p>
 <p>以上便利ベンチマークコマンドでした。</p>
 </div>
 <div class=my-4>
@@ -114,12 +120,10 @@
 </div>
 <div class="flex flex-col md:flex-row md:justify-between -mx-2 mt-4 px-2 pt-4 border-t">
 <div>
-<span class="block font-bold">前の記事</span>
-<a href=https://sardonyx-sard.github.io/posts/2021/12/move-blog/ class=block>ブログの移設</a>
 </div>
 <div class="md:text-right mt-4 md:mt-0">
 <span class="block font-bold">次の記事</span>
-<a href=https://sardonyx-sard.github.io/posts/2021/5/webp/ class=block>jpgからwebpへ</a>
+<a href=https://sardonyx-sard.github.io/posts/2021/12/move-blog/ class=block>ブログの移設</a>
 </div>
 </div>
 </div>

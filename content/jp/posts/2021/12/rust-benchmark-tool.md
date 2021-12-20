@@ -9,7 +9,8 @@ categories:
   - programming, Performance
 ---
 
-# Rustで書かれたベンチマークツール hyperfineの紹介
+- [はじめに](#はじめに)
+- [lsdとcoreutils lsの速度比較検証](#lsdとcoreutils-lsの速度比較検証)
 
 ## はじめに
 
@@ -27,20 +28,22 @@ categories:
 scoop install hyperfine
 ```
 
-## `lsd`と`coreutils ls`の速度比較検証
+## lsdとcoreutils lsの速度比較検証
 
-ではサンプルとして、[lsd](https://github.com/Peltoche/lsd)と[coreutils](https://github.com/uutils/coreutils)の`ls`の2つの速度を計測してみましょう。
+- ではサンプルとして、[lsd](https://github.com/Peltoche/lsd)と[coreutils](https://github.com/uutils/coreutils)の`ls`の2つの速度を計測してみましょう。
 
 ```powerShell
 hyperfine --warmup 3 'lsd' 'coreutils ls'
 ```
 
+<br/>
+
 すると結果は以下のようになりました。
 
 ![hyperfine](/images/programming/rust/hyperfine.webp)
 
-`coreutils ls` の方が `lsd`よりも3.41 ± 0.16倍速い結果となりました。
+coreutils ls の方が lsdよりも3.41 ± 0.16倍速い結果となりました。
 
-`lsd`はアイコンおよびcolorが有効である分の遅延でしょう。
+lsdはアイコンおよびcolorが有効である分の遅延でしょう。
 
 以上便利ベンチマークコマンドでした。
