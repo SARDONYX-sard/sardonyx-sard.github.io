@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>feap on Spelling of SARDONYX</title><link>https://sardonyx-sard.github.io/en/tags/feap/</link><description>Recent content in feap on Spelling of SARDONYX</description><generator>Hugo -- gohugo.io</generator><language>en</language><copyright>&amp;copy; 2021 &lt;a href="https://www.wangchucheng.com/">C. Wang&lt;/a> and &lt;a href="https://www.ruiqima.com/">R. Ma&lt;/a></copyright><lastBuildDate>Wed, 21 Apr 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://sardonyx-sard.github.io/en/tags/feap/index.xml" rel="self" type="application/rss+xml"/><item><title>Running a feap program using Docker</title><link>https://sardonyx-sard.github.io/en/posts/2021/4/docker-for-feap/</link><pubDate>Wed, 21 Apr 2021 00:00:00 +0000</pubDate><guid>https://sardonyx-sard.github.io/en/posts/2021/4/docker-for-feap/</guid><description>Preface feap(A Finite Element Analysis Program)
-This is a finite element analysis program in Japanese.
-I was asked by an acquaintance if I could execute the learning code of this program, so I created an environment using Docker.
-The code I created is here
-The official website of feap is here
-Suffering First, I searched on GitHub for Docker feap and no luck, and got only one hit.
-I found the Dockerfile, but the link specified in the file was broken, so I couldn&amp;rsquo;t build it.</description></item></channel></rss>

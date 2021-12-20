@@ -2,7 +2,7 @@ baseURL: https://sardonyx-sard.github.io
 title: Spelling of SARDONYX
 
 # Comment when installing using Hugo Modules
-theme: hugo-eureka
+theme: eureka
 # Uncomment when installing using Hugo Modules
 # theme: wangchucheng.com/hugo-eureka
 # If you cannot access the Github mirror, you can also use the Gitee mirror: gitee.com/wangchucheng/hugo-eureka
@@ -15,7 +15,7 @@ enableEmoji: true
 enableGitInfo: false
 summaryLength: 75
 
-defaultContentLanguage: ja
+defaultContentLanguage: jp
 hasCJKLanguage: true # Set `true` for Chinese/Japanese/Korean.
 defaultContentLanguageInSubdir: false
 

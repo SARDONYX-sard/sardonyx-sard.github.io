@@ -1,7 +1,7 @@
-ja:
-  languageCode: ja
+jp:
+  languageCode: jp
   languageName: 日本語
-  contentDir: content/ja
+  contentDir: content/jp
   title: SARDONYXの綴り
 
 en:
