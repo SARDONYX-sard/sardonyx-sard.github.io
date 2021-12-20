@@ -1,0 +1,193 @@
+<!doctype html><html lang=jp><meta charset=utf-8>
+<meta name=viewport content="width=device-width">
+<title>変数やクラスのイメージについて | SARDONYXの綴り</title>
+<meta name=generator content="Hugo Eureka 0.8.4">
+<link rel=stylesheet href=https://sardonyx-sard.github.io/css/eureka.min.css>
+<script defer src=https://sardonyx-sard.github.io/js/eureka.min.js></script>
+<link rel=preconnect href=https://fonts.gstatic.com crossorigin>
+<link rel=preload href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&family=Noto+Serif+SC:wght@400;600;700&display=swap" as=style onload="this.onload=null,this.rel='stylesheet'">
+<link rel=stylesheet href=https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.0/build/styles/atom-one-dark.min.css media=print onload="this.media='all',this.onload=null" crossorigin>
+<script defer src=https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.0/build/highlight.min.js crossorigin></script>
+<script defer src=https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.0/build/languages/dart.min.js crossorigin></script>
+<script defer src=https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.14.0/js/all.min.js integrity="sha256-uNYoXefWRqv+PsIF/OflNmwtKM4lStn9yrz2gVl6ymo=" crossorigin></script>
+<link rel=stylesheet href=https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css integrity=sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X media=print onload="this.media='all',this.onload=null" crossorigin>
+<script defer src=https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js integrity=sha384-g7c+Jr9ZivxKLnZTDUhnkOnsh30B4H0rpLUpJ4jAIKs4fnJI+sEnkvrMWph2EDg4 crossorigin></script>
+<script defer src=https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js integrity=sha384-mll67QQFJfxn0IYznZYonOWZ644AWYC+Pt2cHqMaRhXVrursRwvLnLaebdGIlYNa crossorigin></script>
+<script>document.addEventListener("DOMContentLoaded",function(){renderMathInElement(document.body,{delimiters:[{left:"$$",right:"$$",display:!0},{left:"$",right:"$",display:!1},{left:"\\(",right:"\\)",display:!1},{left:"\\[",right:"\\]",display:!0}]})})</script>
+<script defer src=https://cdn.jsdelivr.net/npm/mermaid@8.9.2/dist/mermaid.min.js integrity="sha256-Zmpaaj+GXFsPF5WdPArSrnW3b30dovldeKsW00xBVwE=" crossorigin></script>
+<link rel=icon type=image/png sizes=32x32 href=https://sardonyx-sard.github.io/images/icon_hu64421c6c7700f606f0ad45d807017b09_5843_32x32_fill_box_center_3.png>
+<link rel=apple-touch-icon sizes=180x180 href=https://sardonyx-sard.github.io/images/icon_hu64421c6c7700f606f0ad45d807017b09_5843_180x180_fill_box_center_3.png>
+<meta name=description content="変数、クラスについて考える">
+<script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ブログ記事だよ","item":"https://sardonyx-sard.github.io/posts/"},{"@type":"ListItem","position":2,"name":"変数やクラスのイメージについて","item":"https://sardonyx-sard.github.io/posts/2021/4/valiable-and-class/"}]}</script>
+<script type=application/ld+json>{"@context":"https://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"https://sardonyx-sard.github.io/posts/2021/4/valiable-and-class/"},"headline":"変数やクラスのイメージについて | SARDONYXの綴り","datePublished":"2021-04-22T00:00:00+00:00","dateModified":"2021-12-15T00:00:00+00:00","wordCount":858,"publisher":{"@type":"Person","name":"SARDONYX","logo":{"@type":"ImageObject","url":"https://sardonyx-sard.github.io/images/icon.png"}},"description":"変数、クラスについて考える"}</script><meta property="og:title" content="変数やクラスのイメージについて | SARDONYXの綴り">
+<meta property="og:type" content="article">
+<meta property="og:image" content="https://sardonyx-sard.github.io/images/icon.png">
+<meta property="og:url" content="https://sardonyx-sard.github.io/posts/2021/4/valiable-and-class/">
+<meta property="og:description" content="変数、クラスについて考える">
+<meta property="og:locale" content="jp">
+<meta property="og:locale:alternate" content="en">
+<meta property="og:site_name" content="SARDONYXの綴り">
+<meta property="article:published_time" content="2021-04-22T00:00:00+00:00">
+<meta property="article:modified_time" content="2021-12-15T00:00:00+00:00">
+<meta property="article:section" content="posts">
+<meta property="article:tag" content="javascript">
+<meta property="og:see_also" content="https://sardonyx-sard.github.io/posts/2021/4/typescript/">
+<body class="flex flex-col min-h-screen">
+<header class="fixed flex items-center w-full min-h-16 pl-scrollbar z-50 bg-secondary-bg shadow-sm">
+<div class="w-full max-w-screen-xl mx-auto"><script>let storageColorScheme=localStorage.getItem("lightDarkMode");((storageColorScheme=='Auto'||storageColorScheme==null)&&window.matchMedia("(prefers-color-scheme: dark)").matches||storageColorScheme=="Dark")&&document.getElementsByTagName('html')[0].classList.add('dark')</script>
+<nav class="flex items-center justify-between flex-wrap px-4 py-4 md:py-0">
+<a href=/ class="mr-6 text-primary-text text-xl font-bold">SARDONYXの綴り</a>
+<button id=navbar-btn class="md:hidden flex items-center px-3 py-2" aria-label="Open Navbar">
+<i class="fas fa-bars"></i>
+</button>
+<div id=target class="hidden block md:flex md:flex-grow md:justify-between md:items-center w-full md:w-auto text-primary-text z-20">
+<div class="md:flex md:h-16 text-sm md:flex-grow pb-4 md:pb-0 border-b md:border-b-0">
+<a href=/#about class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2 border-transparent mr-4">About</a>
+<a href=/posts/ class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2 selected-menu-item mr-4">Posts</a>
+<a href=/docs/ class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2 border-transparent mr-4">Docs(Preparation...)</a>
+</div>
+<div class=flex>
+<div class="relative pt-4 md:pt-0">
+<div class="cursor-pointer hover:text-eureka" id=lightDarkMode>
+<i class="fas fa-adjust"></i>
+</div>
+<div class="fixed hidden inset-0 opacity-0 h-full w-full cursor-default z-30" id=is-open>
+</div>
+<div class="absolute flex flex-col left-0 md:left-auto right-auto md:right-0 hidden bg-secondary-bg w-48 rounded py-2 border border-tertiary-bg cursor-pointer z-40" id=lightDarkOptions>
+<span class="px-4 py-1 hover:text-eureka" name=Light>Light</span>
+<span class="px-4 py-1 hover:text-eureka" name=Dark>Dark</span>
+<span class="px-4 py-1 hover:text-eureka" name=Auto>Auto</span>
+</div>
+</div>
+<div class="relative pt-4 pl-4 md:pt-0">
+<div class="cursor-pointer hover:text-eureka" id=languageMode>
+<i class="fas fa-globe"></i>
+<span class=pl-1>日本語</span>
+</div>
+<div class="fixed hidden inset-0 opacity-0 h-full w-full cursor-default z-30" id=is-open-lang>
+</div>
+<div class="absolute flex flex-col left-0 md:left-auto right-auto md:right-0 hidden bg-secondary-bg w-48 rounded py-2 border border-tertiary-bg cursor-pointer z-40" id=languageOptions>
+<a class="px-4 py-1 hover:text-eureka" href=https://sardonyx-sard.github.io/posts/2021/4/valiable-and-class/>日本語</a>
+<a class="px-4 py-1 hover:text-eureka" href=https://sardonyx-sard.github.io/en/posts/2021/4/valiable-and-class/>English</a>
+</div>
+</div>
+</div>
+</div>
+<div class="fixed hidden inset-0 opacity-0 h-full w-full cursor-default z-0" id=is-open-mobile>
+</div>
+</nav>
+<script>let element=document.getElementById('lightDarkMode');storageColorScheme==null||storageColorScheme=='Auto'?document.addEventListener('DOMContentLoaded',()=>{window.matchMedia("(prefers-color-scheme: dark)").addEventListener('change',switchDarkMode)}):storageColorScheme=="Light"?(element.firstElementChild.classList.remove('fa-adjust'),element.firstElementChild.setAttribute("data-icon",'sun'),element.firstElementChild.classList.add('fa-sun')):storageColorScheme=="Dark"&&(element.firstElementChild.classList.remove('fa-adjust'),element.firstElementChild.setAttribute("data-icon",'moon'),element.firstElementChild.classList.add('fa-moon')),document.addEventListener('DOMContentLoaded',()=>{getcolorscheme(),switchBurger(),switchLanguage()})</script>
+</div>
+</header>
+<main class="flex-grow pt-16">
+<div class=pl-scrollbar>
+<div class="w-full max-w-screen-xl lg:px-4 xl:px-8 mx-auto">
+<div class="grid grid-cols-2 lg:grid-cols-8 gap-4 lg:pt-12">
+<div class="col-span-2 lg:col-span-6 bg-secondary-bg rounded px-6 py-8">
+<h1 class="font-bold text-3xl text-primary-text">変数やクラスのイメージについて</h1>
+<div class="flex flex-wrap flex-row items-center mt-2 text-tertiary-text">
+<div class="mr-6 my-2">
+<i class="fas fa-calendar mr-1"></i>
+<span>2021-04-22</span>
+</div>
+<div class="mr-6 my-2">
+<i class="fas fa-clock mr-1"></i>
+<span>2分読む</span>
+</div>
+<div class="mr-6 my-2">
+<i class="fas fa-folder mr-1"></i>
+<a href=https://sardonyx-sard.github.io/categories/programming/ class=hover:text-eureka>programming</a>
+</div>
+<div class="mr-6 my-2">
+<i class="fas fa-th-list mr-1"></i>
+<a href=https://sardonyx-sard.github.io/series/road-of-typescript/ class=hover:text-eureka>Road of TypeScript</a>
+</div>
+</div>
+<div class=content>
+<h2 id=変数は箱なのかという疑問と破壊的非破壊的挙動>変数は箱なのかという疑問と破壊的、非破壊的挙動</h2>
+<p>あなたは変数やクラスについてはじめて学んだ時、どんな風なイメージで教わったか。</p>
+<p>私がはじめて学んだ時は、「変数とは箱のようなものだ」と教わった。</p>
+<p>しかしこれでは少々イメージしづらかった。</p>
+<p>というのも、変数は一度データを入れて、取り出したとき、データのコピーと抜き取りに別れていたからだ。
+<br>
+<br> たとえば、こんなコードがあったとする。</p>
+<pre><code class=language-javascript>// constはconstantの意味で再代入不可の変数宣言
+const i = &quot;Hello&quot;;
+const j = i;
+
+console.log(j); // &gt;&gt;Hello
+</code></pre>
+<p>変数 i のデータをコピーして j に渡している。</p>
+<p>このとき本当に箱であれば取り出されたらなくなってしまうのだが、実際のコードではなくならない。</p>
+<p><code>j = i</code>というのはデータのコピーで別の場所のメモリアドレスにデータがコピーされ保存される。</p>
+<p>コピーと抜き取りは、一般的に非破壊的、破壊的と呼ばれており、これは呼び出すメソッドによってどちらかとなる。</p>
+<p>今回は代入なので、コピーだ。</p>
+<p>破壊的な場合はこうなる。</p>
+<pre><code class=language-javascript>const numbers = [1, 2, 3];
+numbers.pop();
+</code></pre>
+<p>配列の最後、つまり3をとりだす。</p>
+<p>変数numbersには[1, 2]が残る。</p>
+<p>で、あるならば、変数をイメージするときは「データの塊に名前を付けておいたもの」としたらどうか。</p>
+<p>うーむ、破壊的か非破壊的かそれを覚えたうえで変数は「箱」という認識なら問題ないか。</p>
+<p>静的型付けについて箱という認識で行くとわかりやすい面があるしやはり「箱」で行くべきか。</p>
+<h2 id=クラスについてのイメージとは>クラスについてのイメージとは？</h2>
+<p>さらにプログラミングをある程度学んでいくとぶち当たる。</p>
+<p>それがこのクラス。</p>
+<p>いくつかの言語を学んでいると共通してクラスとは「設計図のようなもの」といわれる。</p>
+<p>正直分かりずらい。「関数と変数をグループとしたい場合に使う、まとめ役」ではどうか。</p>
+<p>設計図という認識では、staticメソッドを学ぶとき分かりづらくなるので、「クラスはインスタンス化という工程を挟んで使いまわしをする」ことを覚えておけばなんとかなるきがする。</p>
+<h2 id=結局>結局</h2>
+<p>手を動かし、サンプルコードを見ながら理解し、今度は自分で変数やクラスを作ってみるのが一番理解しやすい。</p>
+</div>
+<div class=my-4>
+<a href=https://sardonyx-sard.github.io/tags/javascript/ class="inline-block bg-tertiary-bg text-sm rounded px-3 py-1 my-1 mr-2 hover:text-eureka">#JavaScript</a>
+</div>
+<div class="flex flex-col md:flex-row md:justify-between -mx-2 mt-4 px-2 pt-4 border-t">
+<div>
+<span class="block font-bold">前の記事</span>
+<a href=https://sardonyx-sard.github.io/posts/2021/4/typescript/ class=block>静的型付け</a>
+</div>
+<div class="md:text-right mt-4 md:mt-0">
+<span class="block font-bold">次の記事</span>
+<a href=https://sardonyx-sard.github.io/posts/2021/4/docker-for-feap/ class=block>Dockerを使ったfeapプログラムの実行</a>
+</div>
+</div>
+</div>
+<div class=col-span-2>
+<div class="bg-secondary-bg rounded p-6">
+<h3 class="text-lg font-semibold mb-4">シリーズ記事</h3>
+<div class=content>
+<a href=https://sardonyx-sard.github.io/posts/2021/4/typescript/>静的型付け</a>
+<br>
+<a href=https://sardonyx-sard.github.io/posts/2021/4/valiable-and-class/>変数やクラスのイメージについて</a>
+<br>
+</div>
+</div>
+<div class="sticky top-16 z-10 hidden lg:block px-6 py-4 bg-primary-bg">
+<span class="text-lg font-semibold">ページ內容</span>
+</div>
+<div class="sticky-toc hidden lg:block px-6 pb-6">
+<nav id=TableOfContents>
+<ul>
+<li><a href=#変数は箱なのかという疑問と破壊的非破壊的挙動>変数は箱なのかという疑問と破壊的、非破壊的挙動</a></li>
+<li><a href=#クラスについてのイメージとは>クラスについてのイメージとは？</a></li>
+<li><a href=#結局>結局</a></li>
+</ul>
+</nav>
+</div>
+<script>window.addEventListener('DOMContentLoaded',()=>{enableStickyToc()})</script>
+</div>
+</div>
+<script>document.addEventListener('DOMContentLoaded',()=>{hljs.initHighlightingOnLoad()})</script>
+</div>
+</div>
+</main>
+<footer class=pl-scrollbar>
+<div class="w-full max-w-screen-xl mx-auto"><div class="text-center p-6 pin-b">
+<p class="text-sm text-tertiary-text">&copy; 2021 <a href=https://www.wangchucheng.com/>C. Wang</a> and <a href=https://www.ruiqima.com/>R. Ma</a>
+&#183; Powered by the <a href=https://github.com/wangchucheng/hugo-eureka class=hover:text-eureka>Eureka</a> theme for <a href=https://gohugo.io class=hover:text-eureka>Hugo</a></p>
+</div></div>
+</footer>
+</body>
+</html>

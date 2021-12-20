@@ -1,0 +1,402 @@
+<!doctype html><html lang=jp><meta charset=utf-8>
+<meta name=viewport content="width=device-width">
+<title>SARDONYXの綴り</title>
+<meta name=generator content="Hugo Eureka 0.8.4">
+<link rel=stylesheet href=https://sardonyx-sard.github.io/css/eureka.min.css>
+<script defer src=https://sardonyx-sard.github.io/js/eureka.min.js></script>
+<link rel=preconnect href=https://fonts.gstatic.com crossorigin>
+<link rel=preload href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&family=Noto+Serif+SC:wght@400;600;700&display=swap" as=style onload="this.onload=null,this.rel='stylesheet'">
+<link rel=stylesheet href=https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.0/build/styles/atom-one-dark.min.css media=print onload="this.media='all',this.onload=null" crossorigin>
+<script defer src=https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.0/build/highlight.min.js crossorigin></script>
+<script defer src=https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.0/build/languages/dart.min.js crossorigin></script>
+<script defer src=https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.14.0/js/all.min.js integrity="sha256-uNYoXefWRqv+PsIF/OflNmwtKM4lStn9yrz2gVl6ymo=" crossorigin></script>
+<link rel=stylesheet href=https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css integrity=sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X media=print onload="this.media='all',this.onload=null" crossorigin>
+<script defer src=https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js integrity=sha384-g7c+Jr9ZivxKLnZTDUhnkOnsh30B4H0rpLUpJ4jAIKs4fnJI+sEnkvrMWph2EDg4 crossorigin></script>
+<script defer src=https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js integrity=sha384-mll67QQFJfxn0IYznZYonOWZ644AWYC+Pt2cHqMaRhXVrursRwvLnLaebdGIlYNa crossorigin></script>
+<script>document.addEventListener("DOMContentLoaded",function(){renderMathInElement(document.body,{delimiters:[{left:"$$",right:"$$",display:!0},{left:"$",right:"$",display:!1},{left:"\\(",right:"\\)",display:!1},{left:"\\[",right:"\\]",display:!0}]})})</script>
+<script defer src=https://cdn.jsdelivr.net/npm/mermaid@8.9.2/dist/mermaid.min.js integrity="sha256-Zmpaaj+GXFsPF5WdPArSrnW3b30dovldeKsW00xBVwE=" crossorigin></script>
+<link rel=icon type=image/png sizes=32x32 href=https://sardonyx-sard.github.io/images/icon_hu64421c6c7700f606f0ad45d807017b09_5843_32x32_fill_box_center_3.png>
+<link rel=apple-touch-icon sizes=180x180 href=https://sardonyx-sard.github.io/images/icon_hu64421c6c7700f606f0ad45d807017b09_5843_180x180_fill_box_center_3.png>
+<meta name=description content="Eureka is a elegant and powerful theme for Hugo.">
+<meta property="og:title" content="SARDONYXの綴り">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://sardonyx-sard.github.io/images/icon.png">
+<meta property="og:url" content="https://sardonyx-sard.github.io/">
+<meta property="og:description" content="Eureka is a elegant and powerful theme for Hugo.">
+<meta property="og:locale" content="jp">
+<meta property="og:locale:alternate" content="en">
+<meta property="og:site_name" content="SARDONYXの綴り">
+<meta property="og:updated_time" content="2021-12-15T00:00:00+00:00">
+<meta property="article:section" content>
+<link rel=alternate type=application/rss+xml href=https://sardonyx-sard.github.io/index.xml title=SARDONYXの綴り>
+<body class="flex flex-col min-h-screen">
+<header class="fixed flex items-center w-full min-h-16 pl-scrollbar z-50 bg-secondary-bg shadow-sm">
+<div class="w-full max-w-screen-xl mx-auto"><script>let storageColorScheme=localStorage.getItem("lightDarkMode");((storageColorScheme=='Auto'||storageColorScheme==null)&&window.matchMedia("(prefers-color-scheme: dark)").matches||storageColorScheme=="Dark")&&document.getElementsByTagName('html')[0].classList.add('dark')</script>
+<nav class="flex items-center justify-between flex-wrap px-4 py-4 md:py-0">
+<a href=/ class="mr-6 text-primary-text text-xl font-bold">SARDONYXの綴り</a>
+<button id=navbar-btn class="md:hidden flex items-center px-3 py-2" aria-label="Open Navbar">
+<i class="fas fa-bars"></i>
+</button>
+<div id=target class="hidden block md:flex md:flex-grow md:justify-between md:items-center w-full md:w-auto text-primary-text z-20">
+<div class="md:flex md:h-16 text-sm md:flex-grow pb-4 md:pb-0 border-b md:border-b-0">
+<a href=/#about class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2 border-transparent mr-4">About</a>
+<a href=/posts/ class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2 border-transparent mr-4">Posts</a>
+<a href=/docs/ class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2 border-transparent mr-4">Docs(Preparation...)</a>
+</div>
+<div class=flex>
+<div class="relative pt-4 md:pt-0">
+<div class="cursor-pointer hover:text-eureka" id=lightDarkMode>
+<i class="fas fa-adjust"></i>
+</div>
+<div class="fixed hidden inset-0 opacity-0 h-full w-full cursor-default z-30" id=is-open>
+</div>
+<div class="absolute flex flex-col left-0 md:left-auto right-auto md:right-0 hidden bg-secondary-bg w-48 rounded py-2 border border-tertiary-bg cursor-pointer z-40" id=lightDarkOptions>
+<span class="px-4 py-1 hover:text-eureka" name=Light>Light</span>
+<span class="px-4 py-1 hover:text-eureka" name=Dark>Dark</span>
+<span class="px-4 py-1 hover:text-eureka" name=Auto>Auto</span>
+</div>
+</div>
+<div class="relative pt-4 pl-4 md:pt-0">
+<div class="cursor-pointer hover:text-eureka" id=languageMode>
+<i class="fas fa-globe"></i>
+<span class=pl-1>日本語</span>
+</div>
+<div class="fixed hidden inset-0 opacity-0 h-full w-full cursor-default z-30" id=is-open-lang>
+</div>
+<div class="absolute flex flex-col left-0 md:left-auto right-auto md:right-0 hidden bg-secondary-bg w-48 rounded py-2 border border-tertiary-bg cursor-pointer z-40" id=languageOptions>
+<a class="px-4 py-1 hover:text-eureka" href=https://sardonyx-sard.github.io/>日本語</a>
+<a class="px-4 py-1 hover:text-eureka" href=https://sardonyx-sard.github.io/en/>English</a>
+</div>
+</div>
+</div>
+</div>
+<div class="fixed hidden inset-0 opacity-0 h-full w-full cursor-default z-0" id=is-open-mobile>
+</div>
+</nav>
+<script>let element=document.getElementById('lightDarkMode');storageColorScheme==null||storageColorScheme=='Auto'?document.addEventListener('DOMContentLoaded',()=>{window.matchMedia("(prefers-color-scheme: dark)").addEventListener('change',switchDarkMode)}):storageColorScheme=="Light"?(element.firstElementChild.classList.remove('fa-adjust'),element.firstElementChild.setAttribute("data-icon",'sun'),element.firstElementChild.classList.add('fa-sun')):storageColorScheme=="Dark"&&(element.firstElementChild.classList.remove('fa-adjust'),element.firstElementChild.setAttribute("data-icon",'moon'),element.firstElementChild.classList.add('fa-moon')),document.addEventListener('DOMContentLoaded',()=>{getcolorscheme(),switchBurger(),switchLanguage()})</script>
+</div>
+</header>
+<main class="flex-grow pt-16">
+<div class="pl-scrollbar bg-secondary-bg">
+<div class="max-w-screen-xl mx-auto">
+<div id=about class="lg:w-3/4 mx-auto px-6 md:px-8 xl:px-12 py-12">
+<div class="flex flex-col md:flex-row items-center justify-center mb-12">
+<div class="flex-none w-48 mx-auto md:ml-0 md:mr-8 md:pr-8 md:border-r">
+<img src=https://sardonyx-sard.github.io/images/sardonyx-icon.jpg class=rounded-full alt=Avatar>
+</div>
+<div class="flex-grow mt-4 md:mt-0">
+<div class="text-3xl py-4">SARDONYX</div>
+<div class="w-3/12 xl:w-2/12 border-b"></div>
+<div class="flex items-center pt-4">
+<div class="flex flex-wrap">
+<a href=https://example.com/ class=pl-4></a>
+</div>
+</div>
+<div class="py-8 text-lg leading-normal">
+とあるモンハン好きの腱鞘炎
+</div>
+</div>
+<div class="flex md:flex-col justify-center items-end ml-8">
+<div class="pb-2 pr-4 md:pr-0 pt-4 md:pt-0">
+<a href=68905624+SARDONYX-sard@users.noreply.github.com><i class="fas fa-envelope"></i></a>
+</div>
+<div class="pb-2 pr-4 md:pr-0 pt-4 md:pt-0">
+<a href=https://twitter.com/SARDONYX_sard><i class="fab fa-twitter"></i></a>
+</div>
+<div class="pb-2 pr-4 md:pr-0 pt-4 md:pt-0">
+<a href=https://github.com/SARDONYX-sard><i class="fab fa-github"></i></a>
+</div>
+</div>
+</div>
+<div class=content>
+<h2 id=自己紹介>自己紹介</h2>
+<ul>
+<li>2020/6からプログラミングを始めたしがないニートの物語。</li>
+<li>お好み焼きな言語は、Rust、TypeScript、PowerShell、Python。</li>
+</ul>
+<h2 id=プログラミングを始めてからの略歴>プログラミングを始めてからの略歴</h2>
+<p>2019/12:</p>
+<ul>
+<li>paizaでJavaを触り始める。</li>
+<li>しかし思い描いていたプログラム(GUI)が作れないためすぐ飽きてしまった。</li>
+<li>自分はプログラミング向いていないなと感じて以降、まったく関心がなくなる。</li>
+</ul>
+<p>2020/6:</p>
+<ul>
+<li>AIという言葉につられ、再びプログラミングを始める。</li>
+<li>友人が卒論の執筆で忙しく、モンスターハンターで一緒に遊べない日々が続いたというのもある。</li>
+<li>あとはC♯で作られたモンスターハンターダブルクロスのセーブデータ改造エディターのソースコードに興味があったという理由。</li>
+</ul>
+<p>2020/7：</p>
+<ul>
+<li>Pythonのクラスの継承までの基礎構文を学び、理解するのに1か月かかった。かなりしんどかった。</li>
+</ul>
+<p>2020/8：</p>
+<ul>
+<li><a href=https://pyq.jp/>PyQ</a>という月額3,040円の有料サイトで機械学習を学んでみた。</li>
+<li>偏差値36の底辺高校卒の僕では数学が難しく、しっかりと理解しきれなかった。</li>
+<li>また、Kotlinという言語(Javaを簡潔に書きたいという目的で作られた言語)を使い、Androidアプリの作成も行った。
+とはいえGoogleの公式サイトでサンプルをひたすらまねただけで、構文の意味はほとんどよくわかっていない。</li>
+</ul>
+<p>2020/9：</p>
+<ul>
+<li>コピペ禁止のサイトに腹が立ち、今後僕の相棒となる「JavaScript」を<a href=https://developer.mozilla.org/ja/docs/Web>MDN</a>で学び始める。</li>
+<li>prototypeを1週間で理解する。(クラスとほぼ似ていたため)</li>
+<li>HTML、CSSの基礎も並行して学ぶ。</li>
+</ul>
+<p>2020/10 - 2020/12：</p>
+<ul>
+<li>MDNは情報量が多いけれど分かりづらい記述も多く、思うようにスキルが伸びず悩む。</li>
+<li>そのためしだいに学習がつらくなりしばらく怠ける。</li>
+</ul>
+<p>2021/1：</p>
+<ul>
+<li>Udemyの<a href=https://www.udemy.com/course/front-dev-tutorial/>【JavaScript＆CSS】ガチで学びたい人のためのWEB開発徹底実践（フロントエンド編）</a>を受講。これが当たりで、最後まで学び、成長の手ごたえと楽しさを取り戻す。</li>
+<li><a href=https://www.udemy.com/course/road-to-javascript-master/>JavaScriptの動作を論理的に解説！JavaScript中級者への道</a>も購入し、これもしっかり学んですっかりJavaScriptが楽しくなった。</li>
+</ul>
+<p>2021/2:</p>
+<ul>
+<li>1月に受講した講座の復習</li>
+</ul>
+<p>2021/3:</p>
+<ul>
+<li>
+<p>Node.jsによるモダンなフロントエンド開発手法を知る。</p>
+</li>
+<li>
+<p><a href=https://www.udemy.com/course/front-env-setting-webpack/>現役エンジニアのためのWebpack環境構築入門 with Babel｜Sass｜Eslint</a>という講座を受講し3日で終了させたけれど、キータッチの硬いキーボードを打ち過ぎて腱鞘炎になる。</p>
+</li>
+<li>
+<p>以降、腱鞘炎でまともにコードを書けない日々が続く。だからといってまったく情報を取り入れてなかったというわけではなく、ひたすらプログラミングのニュース関連記事を漁ったり、VueというUIフレームワークのドキュメントを読んでいた。</p>
+</li>
+</ul>
+<p>2021/4:</p>
+<ul>
+<li>Vueを書き始め、さらにTypeScriptを学び始める。</li>
+<li>しかしすぐに指に激痛が走り、まともにタイピングすることができなかった。</li>
+</ul>
+<p>2021/5:</p>
+<ul>
+<li>2万5千ほどの静電容量無接点方式の高級キーボードを購入。これが当たりで、再びタイピングができるようになった。勉強を再開する。</li>
+<li>Reactを触り始める。</li>
+</ul>
+<p>2021/6:</p>
+<ul>
+<li>React(create-react-app、Next.js)で<a href=https://github.com/SARDONYX-sard/tsx-sard-blog>ブログ</a>を作ってみる。</li>
+<li>クラスコンポーネントを公式ドキュメントでやっと理解したのに、モダンな開発は関数コンポーネントでドキュメントでは当時AdvancedとなっていたHooksを多用するということを知って再学習。useEffect、useStateの使い方四苦八苦した。</li>
+</ul>
+<p>2021/7:</p>
+<ul>
+<li>TypeScriptの面白さに触れ、ひたすらQiitaやZennで情報を漁る。uhyoさんの記事がとくに勉強になった。</li>
+</ul>
+<p>2021/8:</p>
+<ul>
+<li><a href=https://github.com/ScoopInstaller/Scoop>scoop</a>というwindows用のパッケージマネージャーの存在を知る。これがだいぶお世話になる。</li>
+<li>PowerShell Coreの開発環境を整える。</li>
+</ul>
+<p>2021/9:</p>
+<ul>
+<li>windows11 betaに人柱アップデート。色彩テーマを変更すると画面が黒白模様になり応答がなくなるバグにひやひやしながらも、WSLのGUIをwindowsに出せるという嬉しさに歓喜し、wingetという公式パッケージマネージャーの存在でさらに喜んだ。</li>
+</ul>
+<p>2021/11:</p>
+<ul>
+<li>Rustに出会う。rustupを使い簡単導入に感動し、日本語公式ドキュメントを読み進めて、Rustの構文の美しさに涙する。</li>
+<li>Rustはいまもっとも注目している言語。CやC++に匹敵する実行速度を持ち、所有権システムで安全にプログラミングができる優れた言語。</li>
+</ul>
+<p>2021/12:</p>
+<ul>
+<li>dotfilesという開発環境をセットアップするプログラムの存在を知り、人のを手本に<a href=https://github.com/SARDONYX-sard/dotfiles>windowsの開発環境自動構築プログラム</a>を書き始める。</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="pl-scrollbar bg-primary-bg">
+<div class="max-w-screen-xl mx-auto">
+<div id=pages class="lg:w-3/4 mx-auto px-6 md:px-8 xl:px-12 py-12">
+<h2 class="font-bold text-3xl my-4">Pages</h2>
+<div class="overflow-hidden divide-y">
+<div class=py-6>
+<div class="flex flex-col-reverse lg:flex-row justify-between">
+<div class=w-full>
+<div class=mb-4>
+<a href=https://sardonyx-sard.github.io/posts/2021/12/move-blog/ class="font-bold text-xl hover:text-eureka">ブログの移設</a>
+</div>
+<div class=content>
+next.jsからhugoへ goのバイナリで簡単に静的サイトを作成できるプログラムがあるということを知った。 hugoというライブラリはgoで作られてい
+</div>
+<div class="flex flex-wrap flex-row items-center mt-2 text-tertiary-text">
+<div class="mr-6 my-2">
+<i class="fas fa-calendar mr-1"></i>
+<span>2021-12-15</span>
+</div>
+<div class="mr-6 my-2">
+<i class="fas fa-clock mr-1"></i>
+<span>1分読む</span>
+</div>
+<div class="mr-6 my-2">
+<i class="fas fa-folder mr-1"></i>
+<a href=https://sardonyx-sard.github.io/categories/programming-performance/ class=hover:text-eureka>programming, Performance</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class=py-6>
+<div class="flex flex-col-reverse lg:flex-row justify-between">
+<div class=w-full>
+<div class=mb-4>
+<a href=https://sardonyx-sard.github.io/posts/2021/5/webp/ class="font-bold text-xl hover:text-eureka">jpgからwebpへ</a>
+</div>
+<div class=content>
+なぜwebpをつかうのか 現在Udemyで、PHPの講座を受講しているのだけれど、そこでwebp拡張子の存在を知った。 どうやらGoogleが作った拡張子
+</div>
+<div class="flex flex-wrap flex-row items-center mt-2 text-tertiary-text">
+<div class="mr-6 my-2">
+<i class="fas fa-calendar mr-1"></i>
+<span>2021-05-05</span>
+</div>
+<div class="mr-6 my-2">
+<i class="fas fa-clock mr-1"></i>
+<span>2分読む</span>
+</div>
+<div class="mr-6 my-2">
+<i class="fas fa-folder mr-1"></i>
+<a href=https://sardonyx-sard.github.io/categories/programming-performance/ class=hover:text-eureka>programming, Performance</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class=py-6>
+<div class="flex flex-col-reverse lg:flex-row justify-between">
+<div class=w-full>
+<div class=mb-4>
+<a href=https://sardonyx-sard.github.io/posts/2021/4/typescript/ class="font-bold text-xl hover:text-eureka">静的型付け</a>
+</div>
+<div class=content>
+変数の型 先回の記事で変数について話した。箱、という認識で結局はいいかもしれないという。 さて、プログラミング言語には動的型付けと静的型付けというものがあ
+</div>
+<div class="flex flex-wrap flex-row items-center mt-2 text-tertiary-text">
+<div class="mr-6 my-2">
+<i class="fas fa-calendar mr-1"></i>
+<span>2021-04-23</span>
+</div>
+<div class="mr-6 my-2">
+<i class="fas fa-clock mr-1"></i>
+<span>2分読む</span>
+</div>
+<div class="mr-6 my-2">
+<i class="fas fa-folder mr-1"></i>
+<a href=https://sardonyx-sard.github.io/categories/programming/ class=hover:text-eureka>programming</a>
+</div>
+<div class="mr-6 my-2">
+<i class="fas fa-th-list mr-1"></i>
+<a href=https://sardonyx-sard.github.io/series/road-of-typescript/ class=hover:text-eureka>Road of TypeScript</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class=py-6>
+<div class="flex flex-col-reverse lg:flex-row justify-between">
+<div class=w-full>
+<div class=mb-4>
+<a href=https://sardonyx-sard.github.io/posts/2021/4/valiable-and-class/ class="font-bold text-xl hover:text-eureka">変数やクラスのイメージについて</a>
+</div>
+<div class=content>
+変数、クラスについて考える
+</div>
+<div class="flex flex-wrap flex-row items-center mt-2 text-tertiary-text">
+<div class="mr-6 my-2">
+<i class="fas fa-calendar mr-1"></i>
+<span>2021-04-22</span>
+</div>
+<div class="mr-6 my-2">
+<i class="fas fa-clock mr-1"></i>
+<span>2分読む</span>
+</div>
+<div class="mr-6 my-2">
+<i class="fas fa-folder mr-1"></i>
+<a href=https://sardonyx-sard.github.io/categories/programming/ class=hover:text-eureka>programming</a>
+</div>
+<div class="mr-6 my-2">
+<i class="fas fa-th-list mr-1"></i>
+<a href=https://sardonyx-sard.github.io/series/road-of-typescript/ class=hover:text-eureka>Road of TypeScript</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class=py-6>
+<div class="flex flex-col-reverse lg:flex-row justify-between">
+<div class=w-full>
+<div class=mb-4>
+<a href=https://sardonyx-sard.github.io/posts/2021/4/docker-for-feap/ class="font-bold text-xl hover:text-eureka">Dockerを使ったfeapプログラムの実行</a>
+</div>
+<div class=content>
+前書き feap(A Finite Element Analysis Program) 日本語だと有限要素解析プログラム。 そのプログラムの学習用コードの実行がうまくできないと知人から相談されたため、Dockerで環境を作っ
+</div>
+<div class="flex flex-wrap flex-row items-center mt-2 text-tertiary-text">
+<div class="mr-6 my-2">
+<i class="fas fa-calendar mr-1"></i>
+<span>2021-04-21</span>
+</div>
+<div class="mr-6 my-2">
+<i class="fas fa-clock mr-1"></i>
+<span>2分読む</span>
+</div>
+<div class="mr-6 my-2">
+<i class="fas fa-folder mr-1"></i>
+<a href=https://sardonyx-sard.github.io/categories/programming/ class=hover:text-eureka>programming</a>
+<span>, </span>
+<a href=https://sardonyx-sard.github.io/categories/docker/ class=hover:text-eureka>Docker</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="pt-2 hover:text-eureka">
+<a href=https://sardonyx-sard.github.io/posts/ class=font-semibold>続きを読む</a>
+<i class="fas fa-caret-right ml-1"></i>
+</div>
+</div>
+</div>
+</div>
+<div class="pl-scrollbar bg-secondary-bg">
+<div class="max-w-screen-xl mx-auto">
+<div id=vintage>
+<div class="grid grid-cols-9 grid-rows-5 h-(screen-16)">
+<div class="col-start-2 col-span-4 row-start-3 row-span-2 bg-local bg-cover z-10 shadow-2xl" style=background-image:url(https://sardonyx-sard.github.io/images/samples/webp/daffodils.webp)></div>
+<div class="col-start-3 col-span-5 row-start-2 row-span-3 z-20">
+<div class="flex flex-col items-center justify-center min-h-full">
+<div class="bg-white bg-opacity-75 shadow-2xl -m-12 p-12">
+<span class="font-bold text-black text-opacity-75 text-2xl md:text-3xl">千里の道も一歩から</span>
+</div>
+</div>
+</div>
+<div class="col-start-5 col-span-4 row-start-2 row-span-2 bg-local bg-cover shadow-2xl" style=background-image:url(https://sardonyx-sard.github.io/images/samples/webp/orangeFlower.webp)>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="pl-scrollbar bg-cover" style=background-image:url(https://sardonyx-sard.github.io/images/samples/webp/orangeFlower.webp)>
+<div class="max-w-screen-xl mx-auto">
+<div id=blank class="lg:w-3/4 mx-auto px-6 md:px-8 xl:px-12 py-12">
+<div style=text-align:center>
+<p>SARDONYX Blog</p>
+</div>
+</div>
+</div>
+</div>
+</main>
+<footer class=pl-scrollbar>
+<div class="w-full max-w-screen-xl mx-auto"><div class="text-center p-6 pin-b">
+<p class="text-sm text-tertiary-text">&copy; 2021 <a href=https://www.wangchucheng.com/>C. Wang</a> and <a href=https://www.ruiqima.com/>R. Ma</a>
+&#183; Powered by the <a href=https://github.com/wangchucheng/hugo-eureka class=hover:text-eureka>Eureka</a> theme for <a href=https://gohugo.io class=hover:text-eureka>Hugo</a></p>
+</div></div>
+</footer>
+</body>
+</html>
