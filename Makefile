@@ -14,6 +14,9 @@ TODAY := $(shell $(PW_CMD))
 
 default: preview
 
+new:
+			pwsh -noprofile -command "pwsh -File 'scripts/new-article.ps1'"
+
 preview:
 				$(HUGO) server -D -vw -t $(THEME) -d $(BLOG_PATH)
 
