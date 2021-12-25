@@ -12,17 +12,19 @@ mkdir -p "$Year/$Month"
 $DefaultContent = @"
 ---
 title: "$ContentTitle"
+description: ""
+featuredImage: https://rustacean.net/more-crabby-things/rustdocs.png
 date: "$Today"
 lastmod: "$Today"
+toc: true
 tags:
   -
+  -
 categories:
-  - programming, Performance
+  - programming
+series:
+  - "プログラミングを楽しもう"
 ---
-
-# $ContentTitle
-
-- [$ContentTitle](#$ContentTitle)
 
 ## はじめに
 

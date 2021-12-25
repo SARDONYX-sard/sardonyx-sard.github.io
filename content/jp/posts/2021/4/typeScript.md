@@ -2,6 +2,7 @@
 title: "静的型付け"
 date: "2021-04-23"
 lastmod: "2021-12-15"
+toc: true
 tags:
   - JavaScript
   - TypeScript

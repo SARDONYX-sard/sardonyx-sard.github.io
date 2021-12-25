@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Rustで書かれたベンチマークツール on SARDONYXの綴り</title>
+    <link>http://localhost:1313/series/rust%E3%81%A7%E6%9B%B8%E3%81%8B%E3%82%8C%E3%81%9F%E3%83%99%E3%83%B3%E3%83%81%E3%83%9E%E3%83%BC%E3%82%AF%E3%83%84%E3%83%BC%E3%83%AB/</link>
+    <description>Recent content in Rustで書かれたベンチマークツール on SARDONYXの綴り</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>jp</language>
+    <copyright>&amp;copy; 2021 &lt;a href=&#34;https://www.wangchucheng.com/&#34;&gt;C. Wang&lt;/a&gt; and &lt;a href=&#34;https://www.ruiqima.com/&#34;&gt;R. Ma&lt;/a&gt;
+</copyright>
+    <lastBuildDate>Wed, 15 Dec 2021 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/series/rust%E3%81%A7%E6%9B%B8%E3%81%8B%E3%82%8C%E3%81%9F%E3%83%99%E3%83%B3%E3%83%81%E3%83%9E%E3%83%BC%E3%82%AF%E3%83%84%E3%83%BC%E3%83%AB/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>
