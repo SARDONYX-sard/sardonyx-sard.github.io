@@ -10,7 +10,7 @@ organization:
 social:
   - icon: envelope
     iconPack: fas
-    url: 68905624+SARDONYX-sard@users.noreply.github.com
+    url: mailto:68905624+SARDONYX-sard@users.noreply.github.com
   - icon: twitter
     iconPack: fab
     url: https://twitter.com/SARDONYX_sard
